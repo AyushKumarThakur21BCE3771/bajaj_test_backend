@@ -4,6 +4,9 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json()); // To parse JSON request bodies
 
+const cors = require('cors');
+app.use(cors());
+
 // GET endpoint for /bfhl
 app.get('/bfhl', (req, res) => {
   res.status(200).json({ operation_code: 1 });
